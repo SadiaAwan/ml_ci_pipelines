@@ -2,7 +2,7 @@
 name = "pricefc"
 version = "0.1.0"
 description = "Swedish day-ahead electricity price forecasting, versioned with MLflow"
-authors = [{ name = "johan", email = "johan@itkonsult.net" }]
+authors = [{ name = "SadiaAwan", email = "tasmina@hotmail.com" }]
 requires-python = ">=3.12,<3.13"
 dependencies = [
     "pandas>=2.2",
