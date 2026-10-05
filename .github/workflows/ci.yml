@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  check: 
+  check:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,15 +32,15 @@ jobs:
       - name: Run pytest
         run: uv run pytest
 
+      - name: Create result file
+        run: |
+          echo "Tests passed for commit $GITHUB_SHA" > result.txt
+
   upload:
     needs: test
     runs-on: ubuntu-latest
 
     steps:
-      - name: Create result file
-        run: |
-          echo "Tests passed for commit $GITHUB_SHA" > result.txt
-
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
